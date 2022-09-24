@@ -4,20 +4,14 @@
 1 kilogram = 2.204 pound
 */
 
-let toconvert = document.getElementById('input-to-convert'); //parse.Float - rememebr to do this!
-console.log(toconvert)
+let toconvert = document.getElementById('input-to-convert');
+let convertBtn = document.getElementById("btn-convert")
 
 let lengthAnswer = document.getElementById('answer-length')
 let volumeAnswer = document.getElementById('answer-volume')
 let massAnswer = document.getElementById('answer-mass')
 
-// -- Event Listener -- //
-
-let convertBtn = document.getElementById("btn-convert")
-
 convertBtn.addEventListener("click", function() {
-    console.log("Button clicked from addEventListener")
-    console.log(toconvert.value * 3.281)
     // Length Function //
     lengthAnswer.innerHTML = 
         `${toconvert.value} meters = ${Number((toconvert.value * 3.281).toFixed(3))} feet |
